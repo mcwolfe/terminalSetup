@@ -15,8 +15,8 @@ else
 fi
 
 # List of applications to install
-apps=("node" "git" "wget" "python@3.12" "ruby" "vim" "go" "rust" "emacs" "sqlite" "obsidian" "logseq" "visual-studio-code" "julia" "haskell")
-apps+=("wezterm" "kitty" "Alacritty")
+apps=("nodejs" "git" "wget" "python3.12" "ruby" "vim" "golang-go" "rustc" "emacs" "sqlite3" "md.obsidian.Obsidian" "com.logseq.Logseq" "visual-studio-code" "ghc6 ghc6-prof ghc6-doc")
+apps+=("org.wezfurlong.wezterm" "kitty" "Alacritty")
 # Function to install packages using apt or dnf
 install_package() {
     local package=$1
@@ -62,9 +62,11 @@ for app in "${apps[@]}"; do
     fi
 done
 
+
+
 # Install and set up Flatpak
 install_flatpak
-
+curl -fsSL https://install.julialang.org | sh
 # Example of installing an app with Flatpak if needed
 # install_with_flatpak "com.visualstudio.code"
 
