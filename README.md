@@ -19,3 +19,5 @@ which-command=whence
 addAll=addAlias
 mkbash='function _mkbash() { echo "#!/bin/bash" > "$1" && chmod +x "$1" && vim "$1"; }; _mkbash'
 
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
